@@ -54,10 +54,10 @@ UIEdgeInsets scrollViewOriginalContentInsets;
 @dynamic infiniteScrollingView;
 
 - (void)addInfiniteScrollingWithActionHandler:(void (^)(void))actionHandler {
-    [self addInfiniteScrollingWithScrollingDiretion:SVInfiniteScrollingDirectionBottom actionHandler:actionHandler];
+    [self addInfiniteScrollingWithScrollingDirection:SVInfiniteScrollingDirectionBottom actionHandler:actionHandler];
 }
 
-- (void)addInfiniteScrollingWithScrollingDiretion:(SVInfiniteScrollingDirection)direction actionHandler:(void (^)(void))actionHandler {
+- (void)addInfiniteScrollingWithScrollingDirection:(SVInfiniteScrollingDirection)direction actionHandler:(void (^)(void))actionHandler {
     
     if(!self.infiniteScrollingView) {
         CGFloat yOrigin;
@@ -349,6 +349,7 @@ UIEdgeInsets scrollViewOriginalContentInsets;
                 break;
                 
             case SVInfiniteScrollingStateTriggered:
+                [self.activityIndicatorView startAnimating];
                 break;
                 
             case SVInfiniteScrollingStateLoading:

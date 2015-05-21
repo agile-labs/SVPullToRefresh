@@ -21,7 +21,7 @@ typedef NSUInteger SVInfiniteScrollingDirection;
 @interface UIScrollView (SVInfiniteScrolling)
 
 - (void)addInfiniteScrollingWithActionHandler:(void (^)(void))actionHandler;
-- (void)addInfiniteScrollingWithScrollingDiretion:(SVInfiniteScrollingDirection)direction actionHandler:(void (^)(void))actionHandler;
+- (void)addInfiniteScrollingWithScrollingDirection:(SVInfiniteScrollingDirection)direction actionHandler:(void (^)(void))actionHandler;
 - (void)triggerInfiniteScrolling;
 
 @property (nonatomic, strong, readonly) SVInfiniteScrollingView *infiniteScrollingView;
